@@ -96,5 +96,21 @@ def main():
     plt.show()
 
 
+def visualize_problem():
+    x, _, t = generate_sample(args.n_sample)
+    plt.plot(x, t, "kx", label="t")
+
+    x, y, _ = generate_sample(100)
+    plt.plot(x, y, "k", label="y")
+
+    plt.legend()
+
+    plt.xlabel("x")
+    plt.ylabel("y, t")
+
+    plt.show()
+
+
 if __name__ == "__main__":
     main()
+    # visualize_problem()
